@@ -29,7 +29,7 @@ public class PedidosController {
 	
 	@Autowired
 	private PedidosService pedidosService;
-	private TazaService tazaService;
+	public taza = String;
 	
 	//Create new order
 	@PostMapping
@@ -38,6 +38,8 @@ public class PedidosController {
 		if(pedidos.getCantidad_total() >=10 && pedidos.getTipo_taza().equals("Calidad Alta")) {
 			pedidos.setCantidad_regalo(3);
 			pedidos.setTipo_taza_regalo("Calidad Baja");
+			taza = TazaService.findById(pedidos.getId_taza())
+			Taza.setCantidad_disponible(Taza.getCantidad_disponible - 2)
 		}
 		else if(pedidos.getCantidad_total() >=10 && pedidos.getTipo_taza().equals("Calidad Baja")) {
 			pedidos.setCantidad_regalo(2);
@@ -47,13 +49,6 @@ public class PedidosController {
 			pedidos.setCantidad_regalo(0);
 			pedidos.setTipo_taza_regalo("");
 		}
-		Optional<Taza> taza = tazaService.findById(pedidos.getId_taza());
-		if(!taza.isPresent()) {
-			return ResponseEntity.notFound().build();
-		}
-		
-		taza.setCantidad_disponible();
-		Taza.setCantidad_disponible(Taza.getCantidad_disponible());
 		return ResponseEntity.status(HttpStatus.CREATED).body(pedidosService.save(pedidos));
 		//return ResponseEntity.status(HttpStatus.CREATED).body(pedidosService.save(pedidos));
 	}

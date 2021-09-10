@@ -76,7 +76,7 @@ public class Taza {
 	public void setCantidad_total(Long cantidad_total) {
 		this.cantidad_total = cantidad_total;
 	}
-	public static Long getCantidad_disponible() {
+	public static void Long getCantidad_disponible() {
 		return cantidad_disponible;
 	}
 	public static void setCantidad_disponible(Long cantidad_disponible) {

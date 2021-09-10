@@ -21,7 +21,7 @@ public class Taza {
 	private String modelo;
 	private String material;
 	private Long cantidad_total;
-	static Long cantidad_disponible;
+	private Long cantidad_disponible;
 	private float precio_compra;
 	private float precio_venta;
 	private float precio_final_compra;
@@ -76,11 +76,11 @@ public class Taza {
 	public void setCantidad_total(Long cantidad_total) {
 		this.cantidad_total = cantidad_total;
 	}
-	public static Long getCantidad_disponible() {
+	public Long getCantidad_disponible() {
 		return cantidad_disponible;
 	}
-	public static void setCantidad_disponible(Long cantidad_disponible) {
-		Taza.cantidad_disponible = cantidad_disponible;
+	public void setCantidad_disponible(Long cantidad_disponible) {
+		this.cantidad_disponible = cantidad_disponible;
 	}
 	public float getPrecio_compra() {
 		return precio_compra;

@@ -10,7 +10,7 @@ import com.inventario.app.entity.Taza;
 public interface TazaService {
 
 	
-	public Iterable<Taza> findAll();
+public Iterable<Taza> findAll();
 	
 	public Page<Taza> findAll(Pageable pageable);
 	
@@ -20,4 +20,9 @@ public interface TazaService {
 	
 	public void deleteById(Long id);
 	
+	
+	public static Result show(Long id) {
+		Taza taza = Taza.findByTazaId(id);
+		  return taza;
+		}
 }

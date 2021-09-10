@@ -79,7 +79,7 @@ public class Taza {
 	public static Long getCantidad_disponible() {
 		return cantidad_disponible;
 	}
-	public static void setCantidad_disponible(Long cantidad_disponible) {
+	public void setCantidad_disponible(Long cantidad_disponible) {
 		Taza.cantidad_disponible = cantidad_disponible;
 	}
 	public float getPrecio_compra() {
