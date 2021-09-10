@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.inventario.app.entity.Pedidos;
 import com.inventario.app.service.PedidosService;
 
-import com.inventario.app.entity.Taza;
-import com.inventario.app.service.TazaService;
 
 
 @CrossOrigin
@@ -29,7 +27,6 @@ public class PedidosController {
 	
 	@Autowired
 	private PedidosService pedidosService;
-	private TazaService tazaService;
 	
 	//Create new order
 	@PostMapping
@@ -47,13 +44,6 @@ public class PedidosController {
 			pedidos.setCantidad_regalo(0);
 			pedidos.setTipo_taza_regalo("");
 		}
-		Optional<Taza> taza = tazaService.findById(pedidos.getId_taza());
-		if(!taza.isPresent()) {
-			return ResponseEntity.notFound().build();
-		}
-		
-		taza.setCantidad_disponible();
-		Taza.setCantidad_disponible(Taza.getCantidad_disponible());
 		return ResponseEntity.status(HttpStatus.CREATED).body(pedidosService.save(pedidos));
 		//return ResponseEntity.status(HttpStatus.CREATED).body(pedidosService.save(pedidos));
 	}
