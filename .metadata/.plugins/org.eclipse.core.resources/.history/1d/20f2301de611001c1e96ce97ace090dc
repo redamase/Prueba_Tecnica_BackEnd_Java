@@ -1,0 +1,94 @@
+package com.inventario.app.entity;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pedidos")
+
+public class Pedidos {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(length = 50)
+	private String tipo_taza;
+	private String color;
+	private String dimensiones;
+	private String capacidad;
+	private String modelo;
+	private String material;
+	private String tipo_taza_regalo;
+	private int cantidad_total;
+	private int cantidad_regalo;
+	private int usuario_id;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getDimensiones() {
+		return dimensiones;
+	}
+	public void setDimensiones(String dimensiones) {
+		this.dimensiones = dimensiones;
+	}
+	public String getCapacidad() {
+		return capacidad;
+	}
+	public void setCapacidad(String capacidad) {
+		this.capacidad = capacidad;
+	}
+	public String getMaterial() {
+		return material;
+	}
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public int getUsuario_id() {
+		return usuario_id;
+	}
+	public void setUsuario_id(int usuario_id) {
+		this.usuario_id = usuario_id;
+	}
+	public int getCantidad_total() {
+		return cantidad_total;
+	}
+	public void setCantidad_total(int cantidad_total) {
+		this.cantidad_total = cantidad_total;
+	}
+	public String getTipo_taza() {
+		return tipo_taza;
+	}
+	public void setTipo_taza(String tipo_taza) {
+		this.tipo_taza = tipo_taza;
+	}
+	public int getCantidad_regalo() {
+		return cantidad_regalo;
+	}
+	public void setCantidad_regalo(int cantidad_regalo) {
+		this.cantidad_regalo = cantidad_regalo;
+	}
+	public String getTipo_taza_regalo() {
+		return tipo_taza_regalo;
+	}
+	public void setTipo_taza_regalo(String tipo_taza_regalo) {
+		this.tipo_taza_regalo = tipo_taza_regalo;
+	}
+}

@@ -1,0 +1,6 @@
+package com.inventario.app.service;
+
+public interface UserService {
+	public Iterable<User> findAll();
+	
+}

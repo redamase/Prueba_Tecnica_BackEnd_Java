@@ -1,0 +1,15 @@
+package com.inventario.app.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.inventario.app.service.UserService;
+
+@RestController
+public class User {
+	@RequestMapping(path = "/api/users")
+	@Autowired
+	private UserService userService;
+	} 
+}

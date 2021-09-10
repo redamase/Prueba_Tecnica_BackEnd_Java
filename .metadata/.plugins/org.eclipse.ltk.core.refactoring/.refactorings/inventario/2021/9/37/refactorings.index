@@ -1,0 +1,37 @@
+1631052079726	Delete element
+1631053971660	Encapsulate field 'lastname'
+1631053987882	Encapsulate field 'email'
+1631053992832	Encapsulate field 'password'
+1631056100800	Rename compilation unit 'User.java'
+1631061983333	Delete element
+1631062145081	Encapsulate field 'tipo_taza'
+1631063375035	Encapsulate field 'tazaRepository'
+1631069151524	Encapsulate field 'color'
+1631069169195	Encapsulate field 'dimensiones'
+1631069182905	Encapsulate field 'capacidad'
+1631069188676	Encapsulate field 'modelo'
+1631069193931	Encapsulate field 'material'
+1631069200982	Encapsulate field 'cantidad_total'
+1631069210326	Encapsulate field 'cantidad_disponible'
+1631069980172	Encapsulate field 'color'
+1631069990549	Encapsulate field 'dimensiones'
+1631069994870	Encapsulate field 'capacidad'
+1631070000160	Encapsulate field 'material'
+1631070008523	Encapsulate field 'modelo'
+1631070014688	Encapsulate field 'usuario_id'
+1631070023565	Encapsulate field 'cantidad_total'
+1631070033237	Encapsulate field 'tipo_taza'
+1631070123800	Encapsulate field 'cantidad_regalo'
+1631070250420	Rename type 'Pedidos'
+1631112677012	Encapsulate field 'tipo_taza_regalo'
+1631142940086	Copy compilation unit
+1631142991131	Copy compilation unit
+1631143144440	Copy compilation unit
+1631143157339	Copy compilation unit
+1631143193075	Rename type 'Tipo_Taza'
+1631143385972	Copy compilation unit
+1631244066118	Encapsulate field 'precio_total'
+1631244175816	Encapsulate field 'precio_compra'
+1631244180733	Encapsulate field 'precio_venta'
+1631284482968	Encapsulate field 'precio_final_compra'
+1631289227481	Encapsulate field 'id_taza'
