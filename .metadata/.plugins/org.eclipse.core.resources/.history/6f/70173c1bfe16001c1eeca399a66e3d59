@@ -1,0 +1,15 @@
+package com.inventario.app.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+import com.inventario.app.entity.Pedidos;
+import com.inventario.app.entity.Taza;
+
+@Repository
+public interface PedidosRepository extends JpaRepository<Pedidos, Long>{
+	@Query ("select p from pedidos p WHERE p.eliminado = 0")
+	public List<Pedidos> findByNotEliminated();
+}

@@ -1,8 +1,0 @@
-package com.inventario.app.service;
-
-import com.inventario.app.controllers.User;
-
-public interface UserService {
-	public Iterable<User> findAll();
-	
-}

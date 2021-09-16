@@ -1,5 +1,6 @@
 package com.inventario.app.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.inventario.app.entity.Pedidos;
+import com.inventario.app.entity.Taza;
 import com.inventario.app.repository.PedidosRepository;
 
 @Service
@@ -47,5 +49,5 @@ public class PedidosServiceImpl implements PedidosService{
 	public void deleteById(Long id) {
 		pedidosRepository.deleteById(id);
 	}	
-
+	
 }

@@ -1,5 +1,6 @@
 package com.inventario.app.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -19,4 +20,5 @@ public Iterable<Pedidos> findAll();
 	public Pedidos save(Pedidos pedidos);
 	
 	public void deleteById(Long id);
+	
 }

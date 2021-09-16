@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "taza")
+@Table(name = "Taza")
 
 public class Taza {
 	@Id
@@ -25,6 +25,7 @@ public class Taza {
 	private float precio_compra;
 	private float precio_venta;
 	private float precio_final_compra;
+	private boolean eliminado;
 	
 	
 	public Long getId() {
@@ -99,6 +100,12 @@ public class Taza {
 	}
 	public void setPrecio_final_compra(float precio_final_compra) {
 		this.precio_final_compra = precio_final_compra;
+	}
+	public boolean isEliminado() {
+		return eliminado;
+	}
+	public void setEliminado(boolean eliminado) {
+		this.eliminado = eliminado;
 	}
 
 }

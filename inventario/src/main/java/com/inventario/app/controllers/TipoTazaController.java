@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.inventario.app.entity.Taza;
 import com.inventario.app.entity.TipoTaza;
 import com.inventario.app.service.TipoTazaService;
 
@@ -52,6 +54,16 @@ public class TipoTazaController {
 		return tipoTaza;
 	}
 	
-	
+	@PutMapping("editar-tipo-taza/{id}")
+	public ResponseEntity<?> update (@RequestBody TipoTaza tazaDetails, @PathVariable (value = "id") Long id){
+		Optional<TipoTaza> oTipoTaza = TipoTazaService.findById(id);
+		
+		if(!oTipoTaza.isPresent()) {
+			return ResponseEntity.notFound().build();
+		}
+		
+		oTipoTaza.get().setTipo_taza(tazaDetails.getTipo_taza());
+		return ResponseEntity.status(HttpStatus.CREATED).body(TipoTazaService.save(oTipoTaza.get()));
+	}
 	
 }

@@ -1,8 +1,0 @@
-package com.inventario.app.service;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class TazaServiceImpl implements TazaService{
-
-}

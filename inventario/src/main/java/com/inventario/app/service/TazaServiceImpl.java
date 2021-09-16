@@ -1,5 +1,6 @@
 package com.inventario.app.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,6 @@ import com.inventario.app.repository.TazaRepository;
 public class TazaServiceImpl implements TazaService{
 
 	@Autowired
-	
 	private TazaRepository tazaRepository;
 
 	@Override
@@ -29,6 +29,7 @@ public class TazaServiceImpl implements TazaService{
 	public Page<Taza> findAll(Pageable pageable) {
 		return tazaRepository.findAll(pageable);
 	}
+	
 
 	@Override
 	@Transactional(readOnly = true)
@@ -46,6 +47,16 @@ public class TazaServiceImpl implements TazaService{
 	@Transactional
 	public void deleteById(Long id) {
 		tazaRepository.deleteById(id);
-	}	
+	}
+	
+	
+	@Override
+	@Transactional(readOnly = true)
+    public List<Taza> findByNotEliminated() {
+
+        List<Taza> tazas = tazaRepository.findByNotEliminated();
+        return tazas;
+    }
+	
 
 }
